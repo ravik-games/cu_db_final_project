@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres
+    container_name: db_course_project
+    restart: always
+    environment:
+      POSTGRES_USER: ravik
+      POSTGRES_PASSWORD: games
+      POSTGRES_DB: hr_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./db-data:/var/lib/postgresql:Z
